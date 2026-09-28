@@ -7,8 +7,8 @@
     <meta name="theme-color" content="#ffffff" />
     <title>Tianhao (Tony) Ye</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='white'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%232d4056'%3ETY%3C/text%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="./reading-panels.js" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=20260928-projects" />
+    <script src="./reading-panels.js?v=20260928-projects" defer></script>
     <script src="./analytics.js" defer></script>
   </head>
   <body>
@@ -36,6 +36,7 @@
             <details class="nav-group" name="profile-sections" data-section="project">
               <summary>Project</summary>
               <div class="nav-submenu">
+                <a href="#futures-signal-research">Futures signal research</a>
                 <a href="#loan-default-prediction">Loan default prediction</a>
               </div>
             </details>
@@ -54,9 +55,9 @@
           <div class="contact-links">
             <a href="mailto:ty2569@columbia.edu"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#mail"></use></svg>Email</a>
             <a href="https://www.linkedin.com/in/tony-ye-11b54b263/"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#linkedin"></use></svg>LinkedIn</a>
-            <a href="https://github.com/Tonyye1016" hidden><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#github"></use></svg>GitHub</a>
             <a href="./resume.pdf?v=7a84b3fec538"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#file-text"></use></svg>Résumé <span class="file-type">PDF</span></a>
             <a href="https://www.instagram.com/tonyyth_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram: @tonyyth_"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#instagram"></use></svg>Instagram</a>
+            <a href="https://github.com/Tonyye1016" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#github"></use></svg>GitHub</a>
           </div>
         </div>
       </div>
@@ -163,8 +164,19 @@
 
           <section id="project" class="reading-panel" aria-labelledby="project-title">
             <div class="panel-content">
-            <h2 id="project-title">Selected project</h2>
-            <article class="entry" id="loan-default-prediction">
+            <h2 id="project-title">Selected projects</h2>
+            <article class="entry project-entry" id="futures-signal-research">
+              <div class="entry-heading">
+                <h3><a class="entity-link" href="https://github.com/Tonyye1016/futures-signal-research" target="_blank" rel="noopener noreferrer">Futures Positioning &amp; Seasonal Spread Research</a></h3>
+              </div>
+              <p class="entry-role">Python · SQL · WRDS · CFTC</p>
+              <ul>
+                <li>Developed a Python/SQL futures research pipeline with explicit roll rules and expiry-aware contract selection; reconciled COT open-interest identities within one contract in 100% of 1,053 valid weeks.</li>
+                <li>Evaluated WTI positioning signals over 1-, 4-, and 13-week horizons using release-aligned returns and HAC regressions; observed a 0.394 contemporaneous return–position-change correlation but limited predictive evidence (all |t| &lt; 1).</li>
+                <li>Backtested seasonal calendar spreads across four commodity markets and 26–27 contract years; corn Sep/Dec narrowed in 96.2% of years (−11.93¢/bu over 120 trading days), while lean hog Oct/Dec widened in 80.8% (+2.25¢/lb over 20 trading days), before trading costs.</li>
+              </ul>
+            </article>
+            <article class="entry project-entry" id="loan-default-prediction">
               <div class="entry-heading">
                 <h3>Loan default prediction</h3>
                 <p class="date">Jan 2026 – Apr 2026</p>

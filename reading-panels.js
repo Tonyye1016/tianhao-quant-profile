@@ -23,14 +23,14 @@
     focusY += (Math.min(height, firstCenter) - focusY) * topBlend;
     focusY += (Math.max(0, Math.min(height, lastCenter)) - focusY) * bottomBlend;
     // An explicit jump takes precedence over the page-bottom focus adjustment.
-    // Keep the requested entry clear until the reader resumes manual scrolling.
+    // Keep the requested entry selected until the reader resumes manual scrolling.
     if (navigationFocus) {
       const rect = navigationFocus.getBoundingClientRect();
       focusY = Math.max(0, Math.min(height, rect.top + rect.height / 2));
     }
 
-    // Long entries retain a broad clear reading zone. Neighbors soften with
-    // distance, while every paragraph stays visible in its original position.
+    // Only the sidebar selection follows the reading position. Content remains
+    // fully visible and unfiltered at every scroll position.
     const distances = bounds.map(rect => {
       const clearRadius = Math.max(0, (rect.height - height * .4) / 2);
       return Math.max(0, Math.abs(rect.top + rect.height / 2 - focusY) - clearRadius);
@@ -40,24 +40,16 @@
     const currentPanel = requestedPanel || panels[distances.indexOf(nearest)];
     const current = currentPanel.closest('section');
     let activeEntryId = currentPanel.id;
-    if (current.id === 'project') activeEntryId = 'loan-default-prediction';
-    if (current.id === 'education') {
-      const entries = [...current.querySelectorAll('.education-entry')];
-      activeEntryId = navigationFocus?.matches('.education-entry') ? navigationFocus.id : entries.reduce((best, entry) => {
+    if (current.id === 'education' || current.id === 'project') {
+      const entries = [...current.querySelectorAll('.education-entry, .project-entry')];
+      activeEntryId = navigationFocus?.matches('.education-entry, .project-entry') ? navigationFocus.id : entries.reduce((best, entry) => {
         const rect = entry.getBoundingClientRect();
         const distance = Math.abs(rect.top + rect.height / 2 - focusY);
         return distance < best.distance ? { id: entry.id, distance } : best;
       }, { id: '', distance: Infinity }).id;
     }
 
-    // Batch layout reads above and writes below, once per animation frame.
-    panels.forEach((panel, index) => {
-      const progress = panel === requestedPanel ? 0 : smoothstep(clamp((distances[index] - nearest) / (height * .38)));
-      panel.style.setProperty('--panel-blur', `${(progress * 4).toFixed(3)}px`);
-      panel.style.setProperty('--panel-opacity', (1 - progress * .22).toFixed(3));
-    });
-    root.classList.toggle('focus-reading', !reducedMotion.matches);
-
+    // Batch layout reads above and navigation writes below, once per frame.
     for (const link of navigation) {
       if (link.hash === `#${current.id}` || link.hash === `#${activeEntryId}`) {
         link.setAttribute('aria-current', 'location');
@@ -81,7 +73,7 @@
     const content = entry.querySelector(':scope > .panel-content') || entry;
     navigationFocus = content;
     const rect = content.getBoundingClientRect();
-    // Place short entries in the clear reading area; long ones start near the top.
+    // Center short entries in the viewport; long ones start near the top.
     const offset = Math.max(window.innerHeight * .12, window.innerHeight * .46 - rect.height / 2);
     window.scrollTo({ top: Math.max(0, window.scrollY + rect.top - offset), behavior });
     if (moveFocus) {

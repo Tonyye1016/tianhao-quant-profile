@@ -8,7 +8,7 @@ This is a standalone static site. No package installation or build step is requi
 
 - `index.html`: profile, experience, project, education, skills, and contact links.
 - `styles.css`: layout and typography.
-- `reading-panels.js`: section navigation and scroll-focus effects.
+- `reading-panels.js`: section/project navigation and active sidebar links; no content blur or fading.
 - `analytics.js`: consent-gated GA4 page visits and résumé / LinkedIn click events.
 - `resume.pdf`: the current supplied résumé.
 - `tony-ye.jpg`: profile photograph.

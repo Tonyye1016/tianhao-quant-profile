@@ -9,6 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='white'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%232d4056'%3ETY%3C/text%3E%3C/svg%3E" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./reading-panels.js" defer></script>
+    <script src="./analytics.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
@@ -237,7 +238,7 @@
               </div>
             </dl>
           <footer>
-            <p>Tianhao (Tony) Ye</p>
+            <div><p>Tianhao (Tony) Ye</p><button class="privacy-settings" type="button" id="privacy-settings" hidden>Privacy &amp; analytics</button><p id="privacy-status" class="privacy-status" role="status"></p></div>
             <address class="footer-contacts">
               <a href="mailto:ty2569@columbia.edu"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#mail"></use></svg><span>ty2569@columbia.edu</span></a>
               <a href="tel:+18572102852"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#phone"></use></svg><span>Phone: +1 857 210 2852</span></a>
@@ -248,5 +249,17 @@
         </main>
       </div>
     </div>
+    <aside class="analytics-notice" id="analytics-notice" aria-labelledby="analytics-title" hidden>
+      <h2 id="analytics-title" tabindex="-1">Optional analytics</h2>
+      <p>May I use Google Analytics to understand visits and résumé / LinkedIn clicks? It stays off unless you allow it. Your choice won’t affect this website.</p>
+      <details>
+        <summary>What is collected?</summary>
+        <p>If allowed, Google receives page visits, general device and location information, referral sources, and résumé / LinkedIn click events. Analytics cookies distinguish browsers; they don’t tell me a visitor’s name.</p>
+        <p>No advertising features are enabled. This site does not send contact-link contents or arbitrary URL parameters to Analytics. Your choice is saved on this device for 180 days. You can change it using “Privacy &amp; analytics” in the footer.</p>
+        <p><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses this data</a>. Questions? <a href="mailto:ty2569@columbia.edu">Contact Tony</a>.</p>
+      </details>
+      <div class="analytics-actions"><button type="button" id="analytics-reject">No thanks</button><button type="button" id="analytics-accept">Allow analytics</button></div>
+      <button class="privacy-settings" type="button" id="analytics-close">Close without changing</button>
+    </aside>
   </body>
 </html>

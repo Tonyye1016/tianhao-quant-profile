@@ -142,6 +142,8 @@ h3 { margin: 0; color: #38424d; font-size: 1rem; line-height: 1.65; font-weight:
 .entry-heading { display: flex; align-items: baseline; justify-content: space-between; gap: .3rem 1rem; flex-wrap: wrap; }
 .date { margin: 0; flex-shrink: 0; color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; }
 .entry-role { margin: .1rem 0 .6rem; }
+.project-meta { display: flex; align-items: baseline; justify-content: space-between; gap: .1rem 1rem; flex-wrap: wrap; }
+.project-entry .place { margin: 0; }
 .place { color: var(--muted); font-size: .875rem; margin-left: .75rem; white-space: nowrap; }
 .experience-timeline .entry { margin: 0; padding-bottom: 2.5rem; }
 .experience-timeline .entry:last-child { padding-bottom: 0; }

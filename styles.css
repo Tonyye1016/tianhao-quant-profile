@@ -1,24 +1,15 @@
-@font-face {
-  font-family: "IBM Plex Sans";
-  font-style: normal;
-  font-weight: 400 600;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("./fonts-preview/ibm-plex-sans-400.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
 :root {
   color-scheme: light;
   --paper: #fff;
-  --ink: #25292e;
-  --muted: #5d626a;
-  --link: #325e86;
-  --rule: #dcdfe3;
+  --ink: #252525;
+  --muted: #70757a;
+  --link: #196bd2;
+  --rule: #e7e9ec;
   --profile-width: clamp(18rem, 26vw, 25rem);
   --serif: Georgia, "Times New Roman", serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  --content-sans: "IBM Plex Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --content-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --reading-width: 44rem;
 }
 
 * { box-sizing: border-box; }
@@ -48,10 +39,10 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 5px; }
   color: #858e98;
 }
 .profile-panel .link-icon { color: #a0a6ae; }
-.entity-link { color: #286599; }
+.entity-link { color: var(--link); }
 .affiliation-school .entity-link { color: inherit; }
 p { margin: 0 0 1rem; }
-.page { margin-left: var(--profile-width); padding: 4.5rem clamp(2rem, 3vw, 4rem) 2.75rem; }
+.page { margin-left: var(--profile-width); padding: 5rem clamp(3.5rem, 6vw, 7rem) 3.5rem; }
 .profile-panel {
   position: fixed;
   inset: 0 auto 0 0;
@@ -129,23 +120,24 @@ h1 {
 .contact-links a { display: flex; align-items: center; gap: .45rem; color: #edf1f4; white-space: nowrap; }
 .contact-links .link-icon { flex: 0 0 1.1em; width: 1.1em; height: 1.1em; margin: 0; }
 .file-type { font-size: .75rem; color: #b4c0ca; margin-left: .15rem; }
-.page-body { width: min(100%, 822px); margin: 0 auto; }
-main { min-width: 0; color: #424a54; font-family: var(--content-sans); font-weight: 400; line-height: 1.85; }
-section { margin: 0 0 2.9rem; }
-section + section { border-top: 1px solid var(--rule); padding-top: 2.75rem; }
+.page-body { width: min(100%, var(--reading-width)); margin: 0 auto; }
+main { min-width: 0; color: #44474a; font-family: var(--content-sans); font-size: 1.0625rem; font-weight: 400; line-height: 1.75; overflow-wrap: break-word; }
+main p { margin-bottom: 1.3rem; }
+section { margin: 0 0 3.75rem; }
+section + section { border-top: 1px solid var(--rule); padding-top: 3.5rem; }
 .reading-panel { min-width: 0; }
 .panel-content { min-width: 0; width: 100%; }
 .panel-content > :last-child { margin-bottom: 0; }
-h2 { margin: 0 0 1.15rem; color: #38424d; font: 500 1.6rem/1.4 var(--content-sans); letter-spacing: -.015em; }
-h3 { margin: 0; color: #38424d; font-size: 1rem; line-height: 1.65; font-weight: 500; }
-.entry + .entry { margin-top: 1.8rem; }
+h2 { margin: 0 0 1.65rem; color: var(--ink); font: 700 1.875rem/1.3 var(--content-sans); letter-spacing: -.025em; }
+h3 { margin: 0; color: var(--ink); font-size: 1.0625rem; line-height: 1.5; font-weight: 600; }
+.entry + .entry { margin-top: 2.75rem; }
 .entry-heading { display: flex; align-items: baseline; justify-content: space-between; gap: .3rem 1rem; flex-wrap: wrap; }
-.date { margin: 0; flex-shrink: 0; color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; }
-.entry-role { margin: .1rem 0 .6rem; }
+.entry-heading .date, .project-meta .date { margin: 0; flex-shrink: 0; color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; }
+.entry .entry-role { margin: .35rem 0 .85rem; }
 .project-meta { display: flex; align-items: baseline; justify-content: space-between; gap: .1rem 1rem; flex-wrap: wrap; }
 .project-entry .place { margin: 0; }
 .place { color: var(--muted); font-size: .875rem; margin-left: .75rem; white-space: nowrap; }
-.experience-timeline .entry { margin: 0; padding-bottom: 2.5rem; }
+.experience-timeline .entry { margin: 0; padding-bottom: 3.25rem; }
 .experience-timeline .entry:last-child { padding-bottom: 0; }
 .timeline-content { position: relative; padding-left: 2rem; }
 .timeline-content::before {
@@ -171,10 +163,10 @@ h3 { margin: 0; color: #38424d; font-size: 1rem; line-height: 1.65; font-weight:
   background: #d6dde4;
 }
 .experience-timeline .entry-heading { display: flex; flex-direction: column; align-items: flex-start; gap: .35rem; }
-.experience-timeline .entry:not(:last-child) .timeline-content::after { bottom: -2.5rem; }
+.experience-timeline .entry:not(:last-child) .timeline-content::after { bottom: -3.25rem; }
 .experience-timeline .date { order: -1; margin: 0; }
 ul { margin: .6rem 0 0; padding-left: 1.1rem; }
-li { padding-left: .2rem; margin-bottom: .5rem; }
+li { padding-left: .2rem; margin-bottom: .8rem; }
 li::marker { color: #929aa3; font-size: .75em; }
 .research-note { color: var(--muted); font-size: .8125rem; margin: .7rem 0 0; }
 .education-entry p { margin-bottom: .35rem; }
@@ -188,7 +180,7 @@ li::marker { color: #929aa3; font-size: .75em; }
   overflow-x: auto;
   margin: .65rem 0 0;
   color: var(--muted);
-  font-size: .8125rem;
+  font-size: .875rem;
   line-height: 1.5;
 }
 .coursework-row {
@@ -201,12 +193,13 @@ li::marker { color: #929aa3; font-size: .75em; }
   padding: 0 .25rem 0 1rem;
 }
 .coursework-row li { flex: 0 0 auto; margin: 0; padding-left: 0; white-space: nowrap; }
+.coursework:focus-visible { outline: 2px solid var(--link); outline-offset: 5px; }
 .skills { margin: 0; }
-.skills > div { margin-bottom: .75rem; }
-.skills dt { font-weight: 500; }
+.skills > div { margin-bottom: 1.5rem; }
+.skills dt { margin-bottom: .35rem; color: var(--ink); font-weight: 600; }
 .skills dd { margin: 0; }
 footer { border-top: 1px solid var(--rule); margin-top: 3rem; padding: 1.4rem 0 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1rem; color: var(--muted); font-size: .875rem; }
-footer p { margin: 0; }
+main footer p { margin: 0; }
 .footer-contacts { display: grid; gap: .6rem; max-width: 100%; font-style: normal; line-height: 1.65; }
 .footer-contacts a { display: grid; grid-template-columns: 1em minmax(0, 1fr); align-items: start; gap: .5rem; overflow-wrap: anywhere; }
 .footer-contacts .link-icon { margin: .25em 0 0; }
@@ -229,7 +222,7 @@ footer p { margin: 0; }
 @media (max-width: 1100px) {
   .profile-panel { position: relative; width: 100%; text-align: left; overflow: hidden; }
   .profile-panel::before { position: absolute; inset: -1rem; width: auto; background-position: center 44%; }
-  .profile-inner { width: min(100% - 4rem, 822px); margin: 0 auto; padding: 3rem 0 2.5rem; gap: 2rem; }
+  .profile-inner { width: min(100% - 7rem, var(--reading-width)); margin: 0 auto; padding: 3rem 0 2.5rem; gap: 2rem; }
   .profile-intro { position: relative; padding-right: 12rem; }
   .portrait { position: absolute; top: 0; right: 0; width: 9rem; margin: 0; }
   .profile-nav { flex-direction: row; flex-wrap: wrap; gap: .3rem 1.25rem; align-items: center; margin-top: 1.5rem; }
@@ -241,15 +234,17 @@ footer p { margin: 0; }
   .profile-contact { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 1rem 2rem; }
   .profile-location { margin: 0; }
   .contact-links { justify-content: flex-start; }
-  .page { margin-left: 0; padding: 2.75rem 2rem; }
+  .page { margin-left: 0; padding: 3.5rem clamp(3.5rem, 7vw, 5rem); }
 }
 
 @media (max-width: 600px) {
-  .profile-inner { width: calc(100% - 2.5rem); padding: 2rem 0; }
+  .profile-inner { width: calc(100% - 3rem); padding: 2rem 0; }
   .profile-intro { padding-right: 0; }
   .portrait { position: static; width: 7.5rem; margin: 0 0 1.5rem; }
   .profile-nav { column-gap: 1.2rem; }
-  .page { padding: 2.25rem 1.25rem; }
+  .page { padding: 2.75rem 1.5rem; }
+  main { font-size: 1rem; }
+  h2 { font-size: 1.625rem; }
   section { margin-bottom: 2.5rem; }
   section + section { padding-top: 2.25rem; }
   .timeline-content { padding-left: 1.4rem; }
@@ -276,6 +271,7 @@ footer p { margin: 0; }
   .contact-links { justify-content: flex-start; margin-top: .5rem; }
   .page-body { display: block; padding-top: 1.5rem; }
   body { font-size: 10pt; }
+  main { font-size: inherit; }
   h1 { font-size: 25pt; }
   h2 { font-size: 16pt; }
   section { margin-bottom: 1.5rem; }

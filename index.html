@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#ffffff" />
     <title>Tianhao (Tony) Ye</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='white'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%232d4056'%3ETY%3C/text%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./styles.css?v=20260928-project-dates" />
+    <link rel="stylesheet" href="./styles.css?v=20260929-editorial" />
     <script src="./reading-panels.js?v=20260928-projects" defer></script>
     <script src="./analytics.js" defer></script>
   </head>
@@ -55,7 +55,7 @@
           <div class="contact-links">
             <a href="mailto:ty2569@columbia.edu"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#mail"></use></svg>Email</a>
             <a href="https://www.linkedin.com/in/tony-ye-11b54b263/"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#linkedin"></use></svg>LinkedIn</a>
-            <a href="./resume.pdf?v=7a84b3fec538"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#file-text"></use></svg>Résumé <span class="file-type">PDF</span></a>
+            <a href="./resume.pdf?v=e4f50bce1c96"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#file-text"></use></svg>Résumé <span class="file-type">PDF</span></a>
             <a href="https://www.instagram.com/tonyyth_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram: @tonyyth_"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#instagram"></use></svg>Instagram</a>
             <a href="https://github.com/Tonyye1016" target="_blank" rel="noopener noreferrer"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#github"></use></svg>GitHub</a>
           </div>
@@ -73,7 +73,7 @@
             <p>I am proficient in Python and SQL and work comfortably in Linux/Unix environments. I have a solid foundation in machine learning and closely follow advances in ML research.</p>
             <p>I currently serve as a teaching assistant for Professor <a class="entity-link" href="https://www.engineering.columbia.edu/faculty-staff/directory/daniel-bienstock" target="_blank" rel="noopener noreferrer">Daniel Bienstock</a>’s course, IEOR E4525: Machine Learning for Financial Engineering &amp; Operations Research. I am also working on a research project for <a class="entity-link" href="https://www.wellington.com/en" target="_blank" rel="noopener noreferrer">Wellington Management</a>, evaluating large language models relative to human analysts in fundamental financial analysis.</p>
             <p>This summer, I interned in quantitative research at <a class="entity-link" href="https://www.mingshiim.com/" target="_blank" rel="noopener noreferrer">Mingshi Investment Management</a>, a Shanghai-based systematic equity hedge fund with US$10B in AUM, where I conducted alpha research. My work focused on equity alpha factors, Barra-based risk neutralization, ensemble signal modeling, and out-of-sample validation. I translated ideas from academic and sell-side research into reproducible investment pipelines using point-in-time data and realistic trading constraints.</p>
-            <p>You can find more about my background on <a href="https://www.linkedin.com/in/tony-ye-11b54b263/"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#linkedin"></use></svg>LinkedIn</a> or in my <a href="./resume.pdf?v=7a84b3fec538"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#file-text"></use></svg>résumé</a>.</p>
+            <p>You can find more about my background on <a href="https://www.linkedin.com/in/tony-ye-11b54b263/"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#linkedin"></use></svg>LinkedIn</a> or in my <a href="./resume.pdf?v=e4f50bce1c96"><svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="./icons.svg?v=2#file-text"></use></svg>résumé</a>.</p>
             </div>
           </section>
 
@@ -113,14 +113,15 @@
               <div class="timeline-content">
               <div class="entry-heading">
                 <h3><a class="entity-link" href="https://www.mingshiim.com/" target="_blank" rel="noopener noreferrer">Mingshi Investment Management</a></h3>
-                <p class="date">May. 2026 –Aug. 2026</p>
+                <p class="date">May. 2026 – Aug. 2026</p>
               </div>
               <p class="entry-role">Quantitative Research Intern <span class="place">Shanghai, China</span></p>
               <ul>
-                <li>Engineered alpha factors across intraday market microstructure, financial statements, and analyst forecasts covering A-share universe; after industry and MSCI Barra CNE6 risk factor neutralization, identified 10+ factors with low correlation to the existing factor library and annual cross-sectional Rank IC ≥ 3.5% against forward VWAP returns.</li>
+                <li>Engineered A-share alphas from intraday, fundamental, and analyst forecasts; orthogonalized signals against industry and Barra CNE6 exposures, yielding 10+ low-correlation signals with annual Rank IC ≥ 3.5% against next VWAP returns.</li>
                 <li>Backtested factors across multiple holding periods via Rank IC, IC stability, quantile long-short portfolios, and turnover-adjusted sharpe ratio with realistic round-trip costs; top factors reached a theoretical long-short Sharpe ratio of 2.5+.</li>
                 <li>Designed an event-time IC framework for fundamental features and operator transformations, separating announcement impulse from post-event drift and correcting systematic one-day alignment error via filing-timestamp forensics.</li>
-                <li>Developed and benchmarked PIT, embargoed walk-forward logistic regression, XGBoost, LightGBM, and XGBoost–logistic stacking models using 70+ signals interacted with lagged macro variables; the best achieved 7.5% OOS Barra-neutral Rank IC (+60% vs. the strongest standalone factor) and 1.5 IR versus CSI 1000 after costs and trading constraints.</li>
+                <li>Developed and benchmarked PIT, embargoed walk-forward logistic regression, XGBoost, LightGBM, and stacking models using 70+ signals interacted with lagged macro variables; the best achieved 7.5% OOS Barra-neutral Rank IC (+60% vs. the strongest standalone factor) and 1.5 IR versus CSI 1000 after costs and trading constraints.</li>
+                <li>Built an LLM-assisted research workflow to extend academic and sell-side hypotheses into economically motivated factor variants and reproducible Python experiments, supported by human-reviewed PIT, leakage, testing, and data-lineage controls.</li>
               </ul>
               </div>
               </div>
@@ -182,15 +183,17 @@
             </article>
             <article class="entry project-entry" id="loan-default-prediction">
               <div class="entry-heading">
-                <h3>Loan default prediction</h3>
+                <h3>Machine Learning Project – Loan Default Prediction</h3>
                 <p class="place">New York, NY</p>
               </div>
               <div class="project-meta">
                 <p class="entry-role">Risk Analyst &amp; Team Lead</p>
                 <p class="date">Jan. 2026 – Apr. 2026</p>
               </div>
-              <p>Built a Python/scikit-learn pipeline to predict charge-offs across 1.6 million consumer loans. Screened 150 raw fields for information available at loan origination, then applied imputation, scaling, and dimensionality reduction.</p>
-              <p>Compared logistic regression, random forest, and KNN using cross-validated grid search. The selected logistic regression model achieved 0.69 AUROC on the most recent 10% holdout. Key predictors included interest rate, term, FICO, and debt-to-income ratio.</p>
+              <ul>
+                <li>Built a Python/scikit-learn pipeline to predict charge-offs using 1.6M consumer loan records, screening 150 raw fields for availability at loan origination and combining missing-value imputation, feature scaling, and dimensionality reduction.</li>
+                <li>Compared logistic regression, random forest, and k-nearest-neighbor classifiers through cross-validated grid search; selected logistic regression, achieving 0.69 AUROC on the most recent 10% holdout and identifying interest rate, term, FICO score, and debt-to-income ratio as key risk drivers.</li>
+              </ul>
             </article>
             </div>
           </section>
@@ -201,20 +204,17 @@
             <article class="entry education-entry" id="columbia-education">
               <div class="entry-heading">
                 <h3><a class="entity-link" href="https://www.columbia.edu/" target="_blank" rel="noopener noreferrer">Columbia University</a></h3>
-                <p class="date">Aug 2025 – Dec 2026 (expected)</p>
+                <p class="date">Aug. 2025 – Dec. 2026 (expected)</p>
               </div>
               <p class="education-departments"><a class="entity-link" href="https://ieor.columbia.edu/" target="_blank" rel="noopener noreferrer">IEOR Department</a></p>
               <p>M.S. in Operations Research <span class="detail">GPA 3.60</span></p>
-              <div class="coursework" role="group" aria-label="Columbia University coursework">
+              <div class="coursework" role="group" aria-label="Columbia University coursework" tabindex="0">
                 <ul class="coursework-row">
-                  <li>Quantitative Risk Management</li>
-                  <li>Machine Learning for OR and FE</li>
-                  <li>Deep Learning for OR and FE</li>
-                  <li>Stochastic Models</li>
+                  <li>Financial Engineering</li>
+                  <li>Machine Learning</li>
                 </ul>
                 <ul class="coursework-row">
-                  <li>Optimization Models and Methods</li>
-                  <li>Simulation</li>
+                  <li>Quantitative Risk Management</li>
                   <li>Data-Driven Methods in Finance</li>
                 </ul>
               </div>
@@ -222,11 +222,11 @@
             <article class="entry education-entry" id="boston-education">
               <div class="entry-heading">
                 <h3><a class="entity-link" href="https://www.bu.edu/" target="_blank" rel="noopener noreferrer">Boston University</a></h3>
-                <p class="date">May 2025</p>
+                <p class="date">May. 2025</p>
               </div>
               <p class="education-departments"><a class="entity-link" href="https://www.bu.edu/math/" target="_blank" rel="noopener noreferrer">Department of Mathematics &amp; Statistics</a><a class="entity-link" href="https://www.bu.edu/econ/" target="_blank" rel="noopener noreferrer">Department of Economics</a></p>
               <p>B.A. in Economics and Mathematics <span class="detail">Cum Laude</span></p>
-              <div class="coursework" role="group" aria-label="Boston University coursework">
+              <div class="coursework" role="group" aria-label="Boston University coursework" tabindex="0">
                 <ul class="coursework-row">
                   <li>Time Series and Forecasting</li>
                   <li>Probability &amp; Statistics</li>
@@ -248,12 +248,12 @@
             <h2 id="skills-title">Skills</h2>
             <dl class="skills">
               <div>
-                <dt>Programming &amp; tools</dt>
-                <dd>Python (pandas, NumPy, scikit-learn, PyTorch), R, MySQL, Excel, Tableau, Bloomberg, Linux.</dd>
+                <dt>Technical skills</dt>
+                <dd>Python (pandas, NumPy, scikit-learn, PyTorch), Linux/Unix, Git, SQL/MySQL, Excel/VBA, Bloomberg, R</dd>
               </div>
               <div>
-                <dt>Research &amp; risk</dt>
-                <dd>Factor research, Barra risk models, out-of-sample validation, time-series modeling, machine learning, deep learning, optimization, VaR / Expected Shortfall, stress testing, scenario and sensitivity analysis.</dd>
+                <dt>Professional skills</dt>
+                <dd>Factor Research, Point-in-Time Data, Time-Series Modeling, Out-of-Sample Validation, Barra Risk Modeling, Commodity Markets, Options Pricing and Volatility Modeling, Implied Volatility Surfaces, Fixed-Income and Yield-Curve Analytics</dd>
               </div>
             </dl>
           <footer>

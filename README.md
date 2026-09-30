@@ -29,6 +29,10 @@ Open `http://localhost:8000` in your browser. The font comparison page is at `/f
 
 Edit `index.html` for content and `styles.css` for appearance. When replacing `resume.pdf`, update the version query on both résumé links so returning visitors receive the new file.
 
+The September 29, 2026 update uses `Resume_Tianhao(Tony)Ye_Quant.pdf`. Corresponding experience and loan-project bullets, skill lists, and Columbia coursework match that résumé. Wellington, the futures project, and Boston coursework remain as website-specific content. The TA end date remains “Present” as previously requested for the website; the résumé lists the scheduled December 2026 end of term.
+
+The content uses a native system sans-serif stack, a maximum 44rem reading column, and wider responsive side margins. The profile sidebar and continuous, unfiltered scrolling are preserved. Coursework stays in two rows; on narrow screens the course region scrolls horizontally and supports keyboard focus.
+
 This repository starts from a clean snapshot without earlier Site history or hosting configuration. The home address has been removed; the email address and phone number remain intentionally included. Review contact details and the résumé before sharing future updates.
 
 Website files are at the repository root. Publishing through GitHub Pages is a separate step; pushing source code alone does not enable hosting.
